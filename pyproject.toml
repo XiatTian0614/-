@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tooth-segmenter"
+version = "0.1.0"
+description = "MVP tooth mesh segmentation tool"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24",
+  "trimesh>=4.0",
+]
+
+[project.optional-dependencies]
+viewer = ["pyvista>=0.43"]
+test = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
